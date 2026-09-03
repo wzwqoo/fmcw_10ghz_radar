@@ -1,0 +1,106 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "f5e7c415-d837-4aac-95b7-5e294ec8f53b")
+	(paper "A3")
+	(lib_symbols)
+	(sheet
+		(at 41.656 24.13)
+		(size 25.4 8.89)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "6a2d5c89-913a-46ec-9c61-6e1ebc9d2283")
+		(property "Sheetname" "power"
+			(at 41.656 23.4184 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "power.kicad_sch"
+			(at 41.656 33.6046 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "sensor_board"
+				(path "/f5e7c415-d837-4aac-95b7-5e294ec8f53b"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 41.656 48.006)
+		(size 25.908 9.398)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "ca68f6a9-76f5-446d-961e-c4c28c220b0c")
+		(property "Sheetname" "sensors"
+			(at 41.656 47.2944 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "sensors.kicad_sch"
+			(at 41.656 57.9886 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "sensor_board"
+				(path "/f5e7c415-d837-4aac-95b7-5e294ec8f53b"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

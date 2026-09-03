@@ -1,0 +1,33 @@
+# --- KiCad ---
+*-backups/
+*.kicad_prl
+*.lck
+fp-info-cache
+*-odb/
+*.net
+
+# --- Vivado / xsim ---
+*.jou
+*.log
+*.str
+.Xil/
+xsim.dir/
+xsim_*/
+*.wdb
+*.pb
+*.runs/
+*.gen/
+*.cache/
+*.hw/
+*.ip_user_files/
+*.sim/
+
+# --- simulation outputs ---
+*.hex
+*.bin
+ddr_*.txt
+
+# --- misc ---
+__pycache__/
+*.pyc
+.DS_Store

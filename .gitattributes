@@ -1,0 +1,23 @@
+* text=auto
+
+# KiCad sources are text; keep them LF so diffs stay readable
+*.kicad_sch  text eol=lf
+*.kicad_pcb  text eol=lf
+*.kicad_pro  text eol=lf
+*.kicad_mod  text eol=lf
+*.kicad_sym  text eol=lf
+*.dcm        text eol=lf
+*.lib        text eol=lf
+*.mod        text eol=lf
+fp-lib-table text eol=lf
+
+# CAD / binary payloads — never normalize
+*.step   binary
+*.stp    binary
+*.FCStd  binary
+*.pll    binary
+*.efoo   binary
+*.elibz  binary
+*.pdf    binary
+*.png    binary
+*.jpg    binary

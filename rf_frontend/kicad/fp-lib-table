@@ -1,0 +1,6 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "splitter") (type "KiCad") (uri "${KIPRJMOD}/footprints/splitter.pretty") (options "") (descr ""))
+	(lib (name "branchline") (type "KiCad") (uri "${KIPRJMOD}/footprints/branchline.pretty") (options "") (descr ""))
+	(lib (name "antenna") (type "KiCad") (uri "${KIPRJMOD}/footprints/antenna.pretty") (options "") (descr ""))
+)
