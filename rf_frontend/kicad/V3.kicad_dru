@@ -1,0 +1,13 @@
+(version 1)
+# D5 net plan (simulation/d5_left/net_plan.md) enforced in DRC: net-class widths are only routing defaults in KiCad 10.
+
+(rule "input path at the 2 A fuse rating (IPC-2221, 1 oz external, 10 C)"
+  (condition "A.NetName == 'Net-(SW1-B)' || A.NetName == 'Net-(SW1-C)' || A.NetName == 'Net-(D1-A2)'")
+  (constraint track_width (min 0.78mm)))
+
+(rule "supplies of 0.5-0.8 A: IPC-2221 minimum; pin-entry necks (<= 3 mm) at 0.2 mm carry 0.7 A at 10 C"
+  (condition "A.NetName == '+12V' || A.NetName == '+3V9' || A.NetName == '+7V' || A.NetName == '+6V' || A.NetName == '+3V3_MIXER'")
+  (constraint track_width (min 0.2mm)))
+(rule "power runs (trunk 0.8/1.0 mm, rails 0.5 mm) 0.3 mm from other nets' tracks (D5 net plan); pin entries (segments touching a courtyard) keep the board clearance"
+  (condition "(A.NetClass == 'PowerInput' || A.NetClass == 'PowerTrunk' || A.NetClass == 'Rail') && A.Type == 'Track' && B.Type == 'Track' && A.Net != B.Net && !A.intersectsCourtyard('*') && !B.intersectsCourtyard('*')")
+  (constraint clearance (min 0.3mm)))

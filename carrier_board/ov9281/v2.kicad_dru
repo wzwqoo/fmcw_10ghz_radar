@@ -1,0 +1,32 @@
+(version 1)
+
+(rule "DPHY_100 run spacing 0.3 mm"
+	(constraint clearance (min 0.3mm))
+	(condition "A.NetClass == 'DPHY_100' && A.Type == 'Track' && B.Type == 'Track' && A.Net != B.Net && !A.isCoupledDiffPair() && !A.intersectsCourtyard('*') && !B.intersectsCourtyard('*') && !A.intersectsArea('fanout') && !B.intersectsArea('fanout')"))
+
+(rule "LVDS_100 run spacing 0.3 mm"
+	(constraint clearance (min 0.3mm))
+	(condition "A.NetClass == 'LVDS_100' && A.Type == 'Track' && B.Type == 'Track' && A.Net != B.Net && !A.isCoupledDiffPair() && !A.intersectsCourtyard('*') && !B.intersectsCourtyard('*') && !A.intersectsArea('fanout') && !B.intersectsArea('fanout')"))
+
+(rule "RGMII_50 run spacing 0.35 mm"
+	(constraint clearance (min 0.35mm))
+	(condition "A.NetClass == 'RGMII_50' && A.Type == 'Track' && B.Type == 'Track' && A.Net != B.Net && !A.isCoupledDiffPair() && !A.intersectsCourtyard('*') && !B.intersectsCourtyard('*') && !A.intersectsArea('fanout') && !B.intersectsArea('fanout')"))
+
+(rule "CLK_50 run spacing 0.5 mm"
+	(constraint clearance (min 0.5mm))
+	(condition "A.NetClass == 'CLK_50' && A.Type == 'Track' && B.Type == 'Track' && A.Net != B.Net && !A.isCoupledDiffPair() && !A.intersectsCourtyard('*') && !B.intersectsCourtyard('*') && !A.intersectsArea('fanout') && !B.intersectsArea('fanout')"))
+
+(rule "diff pair gap 0.12 mm inside a coupled pair"
+	(constraint clearance (min 0.12mm))
+	(condition "A.isCoupledDiffPair()"))
+
+(rule "50 ohm on In2: 0.12 mm (2116 prepreg to In3 GND)"
+	(layer In2.Cu)
+	(constraint track_width (opt 0.12mm))
+	(condition "A.NetClass == 'RGMII_50' || A.NetClass == 'CLK_50'"))
+
+(rule "RTL8211F corner pads 0.12 mm"
+	(constraint clearance (min 0.12mm))
+	(condition "A.Type == 'Pad' && B.Type == 'Pad' && A.intersectsCourtyard('U8') && B.intersectsCourtyard('U8')"))
+
+# U8's corner pads (1/40, 10/11, 20/21, 30/31) are 0.13 mm apart at the package corners (0.4 mm pitch QFN)

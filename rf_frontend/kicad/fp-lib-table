@@ -3,4 +3,8 @@
 	(lib (name "splitter") (type "KiCad") (uri "${KIPRJMOD}/footprints/splitter.pretty") (options "") (descr ""))
 	(lib (name "branchline") (type "KiCad") (uri "${KIPRJMOD}/footprints/branchline.pretty") (options "") (descr ""))
 	(lib (name "antenna") (type "KiCad") (uri "${KIPRJMOD}/footprints/antenna.pretty") (options "") (descr ""))
+	(lib (name "SW-TH_3P-L12.7-W6.6-P4.70_C9900034369") (type "KiCad") (uri "${KIPRJMOD}/footprints/SW-TH_3P-L12.7-W6.6-P4.70_C9900034369.pretty") (options "") (descr ""))
+	(lib (name "AZ1045-04F") (type "KiCad") (uri "${KIPRJMOD}/footprints/AZ1045-04F/AZ1045-04F.pretty") (options "") (descr ""))
+	(lib (name "V3_Local") (type "KiCad") (uri "${KIPRJMOD}/footprints/V3_Local.pretty") (options "") (descr "Project-controlled V3 land patterns"))
+	(lib (name "FPC-05FB-40PH20") (type "KiCad") (uri "${KIPRJMOD}/footprints/FPC-05FB-40PH20.pretty") (options "") (descr "Existing XUNPU connector footprint, copied into project"))
 )
